@@ -6,9 +6,9 @@ import Services from "../components/Services"; // Hizmetlerimiz component'ini ek
 const Home = () => {
     return (
         <div>
-            <Gallery />  {/* Mevcut Gallery bölümünü bırakıyoruz */}
-            <About />    {/* Hakkımızda kısmı */}
-            <Services /> {/* Hizmetlerimiz kısmı */}
+            <Gallery />
+            <About />
+            <Services />
         </div>
     );
 };

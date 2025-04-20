@@ -6,7 +6,7 @@ const Services = () => {
             <h2 className="text-2xl font-bold mb-4 text-center">Hizmetlerimiz</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="bg-white p-4 shadow rounded">
-                    <h3 className="font-semibold">Alüminyum Doğrama</h3>
+                    <h3 className="font-semibold">Alüminyumm Doğrama</h3>
                     <p>
                         Eklenecek
                     </p>
