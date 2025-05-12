@@ -1,20 +1,21 @@
-import React from "react";
+
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
-    return (
-        <header className="bg-white shadow-md sticky top-0 z-50">
-            <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-                {/* LOGO */}
-                <div className="text-2xl font-bold text-gray-800">
-                    <a href="/">Çelikler Alüminyum</a>
-                </div>
+    const location = useLocation();
 
-                {/* NAVIGATION */}
-                <nav className="space-x-6 hidden md:flex">
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Anasayfa</a>
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Hakkımızda</a>
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Hizmetler</a>
-                    <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">İletişim</a>
+    return (
+        <header>
+            <div className="header-container">
+                <h1 className="logo">Çelikler Alüminyum</h1>
+                <nav>
+                    <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Anasayfa</Link>
+                    <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>Hakkımızda</Link>
+                    <Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''}>Ürünler</Link>
+                    <Link to="/services" className={location.pathname === '/services' ? 'active' : ''}>Hizmetler</Link>
+                    <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>İletişim</Link>
                 </nav>
             </div>
         </header>

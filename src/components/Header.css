@@ -1,0 +1,68 @@
+/* Genel Header Stili */
+header {
+    background-color: #1E2A47;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin: 0;
+  }
+  
+  /* Menü */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #FF9900;
+    color: #1E2A47;
+  }
+  
+  /* Mobil uyumluluk */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  
+    nav ul li a {
+      width: 100%;
+      display: block;
+      padding: 10px 12px;
+    }
+  }
+  

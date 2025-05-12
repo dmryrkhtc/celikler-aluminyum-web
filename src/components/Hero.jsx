@@ -5,7 +5,7 @@ const Hero = () => {
         <section
             className="h-screen bg-cover bg-center flex items-center justify-center"
             style={{
-                backgroundImage: "url('/images/tanitim.jpg')", // Görseli public klasörüne ekle!
+                backgroundImage: "url('/images/tanitim.jpg')",
             }}
         >
             <div className="text-center bg-white bg-opacity-70 p-8 rounded-xl shadow-lg">

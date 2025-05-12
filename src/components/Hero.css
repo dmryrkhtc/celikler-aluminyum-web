@@ -1,0 +1,37 @@
+/* Hero Section */
+.hero {
+    background-image: url('../gorsel/home.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    max-width: 600px;
+    line-height: 1.8;
+  }
+  
+  /* Mobil uyumluluk */
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
