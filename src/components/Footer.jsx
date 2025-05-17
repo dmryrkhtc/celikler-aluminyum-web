@@ -18,7 +18,7 @@ const Footer = () => {
                     <ul>
                         <li><a href="/about">Hakkımızda</a></li>
                         <li><a href="/services">Hizmetler</a></li>
-                        <li><a href="/gallery">Ürünler</a></li>
+
                         <li><a href="/contact">İletişim</a></li>
                     </ul>
                 </div>

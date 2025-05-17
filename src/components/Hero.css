@@ -1,37 +1,76 @@
-/* Hero Section */
-.hero {
-    background-image: url('../gorsel/home.webp');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .hero h2 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    max-width: 600px;
-    line-height: 1.8;
-  }
-  
-  /* Mobil uyumluluk */
-  @media (max-width: 768px) {
-    .hero h2 {
-      font-size: 2.5rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  }
-  
+.hero-about {
+  background: linear-gradient(to bottom, #f8f9fb, #ffffff);
+  padding: 60px 20px;
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #0a0a23;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: #0053ba;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003f94;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #0053ba;
+  color: #0053ba;
+}
+
+.btn.outline:hover {
+  background-color: #0053ba;
+  color: white;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  max-height: 400px;
+}

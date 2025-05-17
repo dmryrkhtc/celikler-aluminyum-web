@@ -34,3 +34,6 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+html {
+  scroll-behavior: smooth;
+}

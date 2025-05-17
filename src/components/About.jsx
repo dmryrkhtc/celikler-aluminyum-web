@@ -1,23 +1,32 @@
 import React from "react";
+import "./About.css";
 
 const About = () => {
     return (
-        <section
-            className="h-screen bg-cover bg-center flex items-center justify-center"
-            style={{
-                backgroundImage: "url('/images/tanitim.jpg')", // Resmi belirtin
-            }}
-        >
-            <div className="text-center bg-white bg-opacity-70 p-8 rounded-xl shadow-lg">
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-                    Çelikler Alüminyum
-                </h1>
-                <p className="text-lg md:text-xl text-gray-600 mb-6">
-                    Güvenilir çözümlerle sektörün lideri.
-                </p>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full transition duration-300">
-                    Bizimle İletişime Geçin
-                </button>
+        <section className="about">
+            <div className="container">
+                <div className="image-container">
+                    <img
+                        src="/images/ornek.jpeg"
+                        alt="Çelikler Alüminyum Hakkımızda"
+                    />
+                </div>
+
+                <div className="text-container">
+                    <h2>Hakkımızda</h2>
+                    <p>
+                        2004 yılında Sivas’ta kurulan <strong>Çelikler Alüminyum</strong>, yapı sektörüne yönelik sunduğu yenilikçi çözümler ve güvenilir hizmet anlayışıyla bölgenin öncü firmalarından biri olmuştur. Kuruluşundan bu yana müşteri memnuniyetini merkeze alan firmamız, hem bireysel hem kurumsal projelerde yüksek kalite standartlarına sahip ürün ve hizmetler sunmaktadır.
+                    </p>
+                    <p>
+                        PVC doğrama, panjur, sineklik, duşakabin, cam balkon, alüminyum doğrama, küpeşte, fotoselli kapı ve otomatik kepenk sistemleri gibi geniş bir ürün yelpazesiyle hizmet veren firmamız; Sivas merkezli olmakla birlikte çevre illerde de önemli projelere imza atmıştır. Estetik ve dayanıklılığı bir araya getiren çözümlerimizle yaşam alanlarını daha konforlu ve modern hale getirmeyi amaçlıyoruz.
+                    </p>
+                    <p>
+                        Deneyimli kadromuz, güçlü teknik altyapımız ve çözüm odaklı yaklaşımımız sayesinde sektörde güven duyulan bir marka haline gelen firmamız, yılların getirdiği tecrübe ve yenilikçi vizyonuyla sürekli olarak kendini geliştirmektedir.
+                    </p>
+                    <p>
+                        <strong>Çelikler Alüminyum</strong> olarak hedefimiz, sektördeki teknolojik gelişmeleri yakından takip ederek kalite ve hizmet çıtamızı sürekli yukarı taşımak ve müşterilerimize her zaman en iyisini sunmaktır.
+                    </p>
+                </div>
             </div>
         </section>
     );

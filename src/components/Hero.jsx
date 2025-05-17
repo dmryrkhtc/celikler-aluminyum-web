@@ -1,26 +1,28 @@
 import React from "react";
+import "./Hero.css";
 
 const Hero = () => {
     return (
-        <section
-            className="h-screen bg-cover bg-center flex items-center justify-center"
-            style={{
-                backgroundImage: "url('/images/tanitim.jpg')",
-            }}
-        >
-            <div className="text-center bg-white bg-opacity-70 p-8 rounded-xl shadow-lg">
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-                    Çelikler Alüminyum
-                </h1>
-                <p className="text-lg md:text-xl text-gray-600 mb-6">
-                    Güvenilir çözümlerle sektörün lideri.
-                </p>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full transition duration-300">
-                    Bizimle İletişime Geçin
-                </button>
+        <section className="hero-about">
+            <div className="hero-container">
+                <div className="hero-text">
+                    <h1>Türkiye'nin Alüminyum Çözümü</h1>
+                    <p>
+                        Çelikler Alüminyum olarak kaliteli hizmet ve müşteri memnuniyetini
+                        ön planda tutuyoruz. Modern çözümlerimizle sektörde fark yaratıyoruz.
+                    </p>
+                    <div className="hero-buttons">
+                        <button className="btn">Ücretsiz Keşif</button>
+                        <button className="btn outline">Projeni Başlat</button>
+                    </div>
+                </div>
+                <div className="hero-image">
+                    <img src="/images/ornek.jpeg" alt="Çelikler Alüminyum" />
+                </div>
             </div>
         </section>
     );
 };
 
 export default Hero;
+

@@ -3,20 +3,21 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import Hero from "./components/Hero";
-import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
+import ScrollToTop from './components/ScrollToTop'; 
 
 function App() {
   return (
     <Router>
-      <Header /> {/* Header yalnızca burada olmalı */}
+      <Header /> 
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} /> 
       </Routes>
       <Footer />
     </Router>

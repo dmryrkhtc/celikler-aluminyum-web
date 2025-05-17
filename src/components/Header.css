@@ -1,6 +1,6 @@
 /* Genel Header Stili */
 header {
-  background-color: #1E2A47;
+  background-color: #2c50a4;
   color: #fff;
   padding: 20px 40px;
   display: flex;
@@ -74,4 +74,20 @@ nav ul li a.active {
       display: block;
       padding: 12px;
   }
+}
+/* Logo kapsayıcı */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo görseli */
+.logo-img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px; /* istenirse köşeleri yuvarlatmak için */
+ padding-left: 50px;
+  padding-right: 20px;
 }
