@@ -2,14 +2,23 @@ import React from "react";
 
 const About = () => {
     return (
-        <section className="p-6 bg-gray-50">
-            <h2 className="text-2xl font-bold mb-4 text-center">Hakkımızda</h2>
-            <p className="text-lg text-center">
-                Biz, kaliteli hizmet anlayışını benimsemiş ve müşteri memnuniyetine
-                odaklanmış bir ekip olarakk, sektörümüzdeki en yeni yenilikleri takip
-                ederek çözümler üretiyoruz. Amacımız, her zaman müşteri odaklı
-                düşünmek ve yüksek standartlarda hizmet sunmaktır.
-            </p>
+        <section
+            className="h-screen bg-cover bg-center flex items-center justify-center"
+            style={{
+                backgroundImage: "url('/images/tanitim.jpg')", // Resmi belirtin
+            }}
+        >
+            <div className="text-center bg-white bg-opacity-70 p-8 rounded-xl shadow-lg">
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+                    Çelikler Alüminyum
+                </h1>
+                <p className="text-lg md:text-xl text-gray-600 mb-6">
+                    Güvenilir çözümlerle sektörün lideri.
+                </p>
+                <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full transition duration-300">
+                    Bizimle İletişime Geçin
+                </button>
+            </div>
         </section>
     );
 };
