@@ -1,4 +1,3 @@
-
 // src/components/Contact.jsx
 import React, { useState } from "react";
 import "./Contact.css";
@@ -6,7 +5,13 @@ import "./Contact.css";
 const Contact = () => {
     const [showQuoteForm, setShowQuoteForm] = useState(false);
     const [selectedRating, setSelectedRating] = useState(0);
+    const [feedbackSent, setFeedbackSent] = useState(false);
 
+    const handleFeedbackSubmit = (e) => {
+        e.preventDefault();
+        setFeedbackSent(true);
+        setTimeout(() => setFeedbackSent(false), 3000);
+    };
 
     return (
         <div className="contact-page">
@@ -48,9 +53,10 @@ const Contact = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                 />
             </div>
+
             <div className="feedback-form">
                 <h3>Kullanıcı Deneyiminizi Değerlendirin</h3>
-                <form onSubmit={(e) => e.preventDefault()}>
+                <form onSubmit={handleFeedbackSubmit}>
                     <div className="stars-input">
                         {[1, 2, 3, 4, 5].map((num) => (
                             <span
@@ -64,17 +70,22 @@ const Contact = () => {
                     </div>
                     <textarea placeholder="Yorumunuzu yazın..." rows="4" required></textarea>
                     <button type="submit">Gönder</button>
+                    {feedbackSent && (
+                        <p style={{ color: "green", marginTop: "10px" }}>
+                            Yorumunuz gönderildi. Teşekkür ederiz!
+                        </p>
+                    )}
                 </form>
             </div>
-
 
             <div className="quote-section">
                 <h3>Ücretsiz Fiyat Teklifi İsteyin</h3>
                 <button onClick={() => setShowQuoteForm(true)}>Teklif Formunu Aç</button>
 
                 {showQuoteForm && (
-                    <div className="modal">
-                        <div className="modal-content">
+                    <div className="modal" onClick={() => setShowQuoteForm(false)}>
+                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                            <button className="modal-close" onClick={() => setShowQuoteForm(false)}>×</button>
                             <h3>Ücretsiz Keşif Formu</h3>
                             <form className="quote-form-grid">
                                 <div className="form-group">
@@ -111,20 +122,9 @@ const Contact = () => {
                                 </div>
                                 <button type="submit">Gönder</button>
                             </form>
-                            <button className="close-btn" onClick={() => setShowQuoteForm(false)}>Kapat</button>
                         </div>
                     </div>
                 )}
-            </div>
-
-            <div className="feedback-section">
-                <h3>Kullanıcı Yorumları</h3>
-                <div className="stars">⭐⭐⭐⭐☆</div>
-                <div className="comments">
-                    <p><strong>Ahmet Y.:</strong> Hizmetten çok memnun kaldım.</p>
-                    <p><strong>Merve D.:</strong> Montaj süreci hızlı ve sorunsuzdu.</p>
-                    <p><strong>Ali K.:</strong> Fiyatlar makul, ilgi güzeldi.</p>
-                </div>
             </div>
         </div>
     );

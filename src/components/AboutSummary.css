@@ -1,0 +1,11 @@
+.about.summary .text-container p {
+    max-height: 80px; /* ya da sadece 1 paragraf bırak */
+    overflow: hidden;
+  }
+  
+  .about.summary .btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
