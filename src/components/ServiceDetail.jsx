@@ -1,50 +1,77 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { servicesData } from "../data/servicesData";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./ServiceDetail.css";
 
 const ServiceDetail = () => {
     const { id } = useParams();
     const service = servicesData[id];
     const [activeTab, setActiveTab] = useState("genel");
-    const [activeMedia, setActiveMedia] = useState("video");
-    const [showModal, setShowModal] = useState(false); // 👈 modal kontrolü
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === "Escape") {
+                setShowModal(false);
+            }
+        };
+        window.addEventListener("keydown", handleEscape);
+        return () => window.removeEventListener("keydown", handleEscape);
+    }, []);
 
     if (!service) return <p>Hizmet bulunamadı.</p>;
+
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        alert("Form başarıyla gönderildi!");
+    };
 
     return (
         <div className="service-detail-wrapper">
             <div className="service-detail-container">
                 <div className="media-column">
-                    <div className="media-display">
-                        {activeMedia === "video" ? (
-                            <video
-                                className="service-video"
-                                src={service.video}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                poster={service.image}
-                            />
-                        ) : (
-                            <img src={service.image} alt={service.title} className="service-image" />
-                        )}
-                    </div>
-                    <ul className="media-thumbnails">
-                        <li>
-                            <button className={activeMedia === "video" ? "active" : ""} onClick={() => setActiveMedia("video")}>🎥</button>
-                        </li>
-                        <li>
-                            <button className={activeMedia === "image" ? "active" : ""} onClick={() => setActiveMedia("image")}>🖼️</button>
-                        </li>
-                    </ul>
+                    <Slider {...sliderSettings} className="gallery-slider">
+                        {service.gallery?.map((img, index) => (
+                            <div key={index}>
+                                <img
+                                    src={img}
+                                    alt={`${service.title} görsel ${index + 1}`}
+                                    className="slider-image"
+                                />
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
 
                 <div className="content-column">
-                    <div className="tabs">
-                        <button className={activeTab === "genel" ? "active" : ""} onClick={() => setActiveTab("genel")}>Genel Özellikler</button>
-                        <button className={activeTab === "teknik" ? "active" : ""} onClick={() => setActiveTab("teknik")}>Teknik Özellikler</button>
+                    <div className="tabs" role="tablist">
+                        <button
+                            role="tab"
+                            aria-selected={activeTab === "genel"}
+                            className={activeTab === "genel" ? "active" : ""}
+                            onClick={() => setActiveTab("genel")}
+                        >
+                            Genel Özellikler
+                        </button>
+                        <button
+                            role="tab"
+                            aria-selected={activeTab === "teknik"}
+                            className={activeTab === "teknik" ? "active" : ""}
+                            onClick={() => setActiveTab("teknik")}
+                        >
+                            Teknik Özellikler
+                        </button>
                     </div>
 
                     <div className="tab-content">
@@ -53,7 +80,7 @@ const ServiceDetail = () => {
                                 <h2>{service.title}</h2>
                                 <p>{service.description}</p>
                                 <ul>
-                                    {service.generalFeatures.map((feature, index) => (
+                                    {service.generalFeatures?.map((feature, index) => (
                                         <li key={index}>{feature}</li>
                                     ))}
                                 </ul>
@@ -64,12 +91,16 @@ const ServiceDetail = () => {
                                 {service.technicalFeatures ? (
                                     <table className="tech-specs-table">
                                         <tbody>
-                                            {Object.entries(service.technicalFeatures).map(([key, value]) => (
-                                                <tr key={key}>
-                                                    <td><strong>{key}</strong></td>
-                                                    <td>{value}</td>
-                                                </tr>
-                                            ))}
+                                            {Object.entries(service.technicalFeatures).map(
+                                                ([key, value]) => (
+                                                    <tr key={key}>
+                                                        <td>
+                                                            <strong>{key}</strong>
+                                                        </td>
+                                                        <td>{value}</td>
+                                                    </tr>
+                                                )
+                                            )}
                                         </tbody>
                                     </table>
                                 ) : (
@@ -88,14 +119,20 @@ const ServiceDetail = () => {
             {showModal && (
                 <div className="modal-overlay" onClick={() => setShowModal(false)}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="modal-close" onClick={() => setShowModal(false)}>×</button>
+                        <button className="modal-close" onClick={() => setShowModal(false)}>
+                            ×
+                        </button>
                         <h3>Fiyat Teklifi Formu</h3>
-                        <form className="quote-form">
+                        <form className="quote-form" onSubmit={handleFormSubmit}>
                             <input type="text" placeholder="Adınız" required />
                             <input type="text" placeholder="Soyadınız" required />
                             <input type="email" placeholder="E-posta" required />
                             <input type="tel" placeholder="Telefon" />
-                            <textarea placeholder="Proje detaylarını yazınız..." rows="4" required></textarea>
+                            <textarea
+                                placeholder="Proje detaylarını yazınız..."
+                                rows="4"
+                                required
+                            ></textarea>
                             <button type="submit">Gönder</button>
                         </form>
                     </div>
