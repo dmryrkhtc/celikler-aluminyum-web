@@ -1,11 +1,80 @@
-.about.summary .text-container p {
-    max-height: 80px; /* ya da sadece 1 paragraf bırak */
-    overflow: hidden;
+.about-summary-section {
+  background: #f6f8fa;
+  padding: 60px 20px;
+}
+
+.about-summary-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-summary-image {
+  flex: 1 1 400px;
+  max-width: 500px;
+  position: relative;
+}
+
+.about-summary-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-height: 350px;
+  transition: transform 0.4s ease;
+}
+
+.about-summary-image img:hover {
+  transform: scale(1.03);
+}
+
+.about-summary-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.about-summary-text h2 {
+  font-size: 2.2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.about-summary-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.about-summary-text .btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #0053ba;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-summary-text .btn:hover {
+  background-color: #003f94;
+}
+
+@media (max-width: 768px) {
+  .about-summary-container {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .about.summary .btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    cursor: pointer;
+
+  .about-summary-text .btn {
+    width: 100%;
   }
-  
+}

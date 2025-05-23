@@ -22,6 +22,7 @@
   max-width: 280px;
   display: inline-block;
   vertical-align: top;
+  text-decoration: none;
 }
 
 .service-card:hover {
@@ -45,6 +46,7 @@
   font-weight: 600;
   text-align: center;
   border-bottom: none;
+  text-decoration: none;
 }
 
 .service-card p {

@@ -20,7 +20,7 @@ export const servicesData = {
             "Garanti Süresi": "5 yıl",
         },
         gallery: [
-            "/public/pictures/camb1.webp",
+            "/pictures/camb1.webp",
             "/pictures/camb2.jpg",
             "/pictures/camb3.jpeg",
             "/pictures/camb4.webp",
