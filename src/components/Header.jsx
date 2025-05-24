@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header>
             <div className="logo">
-                {/* Logo resmi Link ile sarıldı */}
+
                 <Link to="/">
                     <img src={logoImage} alt="Çelikler Logo" className="logo-img" />
                 </Link>

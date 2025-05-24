@@ -17,8 +17,7 @@
   opacity: 0.15;
   filter: brightness(0.85) saturate(1.2) hue-rotate(190deg);
   z-index: 0;
-  pointer-events: none; /* Arka plan görseli tıklanabilir olmasın */
-}
+  pointer-events: none; }
 
 .container {
   position: relative;
@@ -70,12 +69,12 @@
 }
 .about img {
   width: 100%;
-  height: auto;        /* Orijinal yükseklik korunuyor */
-  max-height: 400px;   /* Maksimum yüksekliği koruyor */
+  height: auto;       
+  max-height: 400px;   
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   object-fit: cover;
 
-  /* Mavi tonları ve hafif blur efekti */
+
 
 }

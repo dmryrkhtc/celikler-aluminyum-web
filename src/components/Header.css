@@ -75,19 +75,18 @@ nav ul li a.active {
       padding: 12px;
   }
 }
-/* Logo kapsayıcı */
-.logo {
+/* Logo kapsayıcı */.logo {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* Logo görseli */
+
 .logo-img {
   width: 250px;
   height: auto;
   object-fit: contain;
-  border-radius: 6px; /* istenirse köşeleri yuvarlatmak için */
+  border-radius: 6px; 
  padding-left: 50px;
   padding-right: 20px;
 }

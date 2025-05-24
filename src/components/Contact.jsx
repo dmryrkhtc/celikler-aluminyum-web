@@ -23,7 +23,7 @@ const Contact = () => {
         feedback: false
     });
 
-    // Form referansları
+
     const contactFormRef = useRef(null);
     const quoteFormRef = useRef(null);
     const careerFormRef = useRef(null);
@@ -210,7 +210,7 @@ const Contact = () => {
                 </form>
             </div>
 
-            {/* KONUM EN ALTA TAŞINDI */}
+
             <div className="map-section">
                 <h3>Konumumuz</h3>
                 <iframe

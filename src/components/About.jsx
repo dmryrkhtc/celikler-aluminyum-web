@@ -8,7 +8,7 @@ import "./About.css";
 const About = () => {
     return (
         <section className="about">
-            {/* Arka plan görseli */}
+
 
 
             <div className="container">
