@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { servicesData } from "../data/servicesData";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import sineklikImg from "../assets/images/sineklik1.jpg";
+import cambalkonImg from "../assets/images/camb4.webp";
+import dusakabinImg from "../assets/images/dusakabin2.jpg";
+import alüminyumImg from "../assets/images/al4.jpeg";
+import kupeşteImg from "../assets/images/kupeste2.webp";
+import fotoselliImg from "../assets/images/foto4.jpeg";
+
 import "./ServiceDetail.css";
 
 const ServiceDetail = () => {
@@ -14,9 +18,7 @@ const ServiceDetail = () => {
 
     useEffect(() => {
         const handleEscape = (e) => {
-            if (e.key === "Escape") {
-                setShowModal(false);
-            }
+            if (e.key === "Escape") setShowModal(false);
         };
         window.addEventListener("keydown", handleEscape);
         return () => window.removeEventListener("keydown", handleEscape);
@@ -24,13 +26,24 @@ const ServiceDetail = () => {
 
     if (!service) return <p>Hizmet bulunamadı.</p>;
 
-    const sliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+    const videoMap = {
+        0: "https://www.egepen.com.tr/files/nirvanamp4_10-01-2025_09-47-20.mp4",
+        1: "https://www.egepen.com.tr/files/surmemp4_10-01-2025_09-53-36.mp4",
+        9: "https://www.egepen.com.tr/site/videos/kepenkvideo.mp4",
+        2: "https://www.egepen.com.tr/site/videos/panjurvideo.mp4",
     };
+
+    const imageMap = {
+        3: sineklikImg,
+        4: dusakabinImg,
+        5: cambalkonImg,
+        6: alüminyumImg,
+        7: kupeşteImg,
+        8: fotoselliImg,
+    };
+
+    const videoUrl = videoMap[id];
+    const fallbackImage = imageMap[id] || imageMap[3]; // fallback image at sineklikImg if no id match
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -41,17 +54,22 @@ const ServiceDetail = () => {
         <div className="service-detail-wrapper">
             <div className="service-detail-container">
                 <div className="media-column">
-                    <Slider {...sliderSettings} className="gallery-slider">
-                        {service.gallery?.map((img, index) => (
-                            <div key={index}>
-                                <img
-                                    src={img}
-                                    alt={`${service.title} görsel ${index + 1}`}
-                                    className="slider-image"
-                                />
-                            </div>
-                        ))}
-                    </Slider>
+                    {videoUrl ? (
+                        <video
+                            src={videoUrl}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="media service-video"
+                        />
+                    ) : (
+                        <img
+                            src={fallbackImage}
+                            alt={service.title}
+                            className="media service-image"
+                        />
+                    )}
                 </div>
 
                 <div className="content-column">
@@ -118,8 +136,14 @@ const ServiceDetail = () => {
 
             {showModal && (
                 <div className="modal-overlay" onClick={() => setShowModal(false)}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="modal-close" onClick={() => setShowModal(false)}>
+                    <div
+                        className="modal-content"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className="modal-close"
+                            onClick={() => setShowModal(false)}
+                        >
                             ×
                         </button>
                         <h3>Fiyat Teklifi Formu</h3>
@@ -132,7 +156,7 @@ const ServiceDetail = () => {
                                 placeholder="Proje detaylarını yazınız..."
                                 rows="4"
                                 required
-                            ></textarea>
+                            />
                             <button type="submit">Gönder</button>
                         </form>
                     </div>
@@ -143,4 +167,3 @@ const ServiceDetail = () => {
 };
 
 export default ServiceDetail;
-

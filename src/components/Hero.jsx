@@ -27,16 +27,10 @@ const Hero = () => {
                         <img src="/images/ornek.jpeg" alt="Çelikler Alüminyum" />
                     </div>
                 </div>
-                <div className="hero-bottom-text">
-                    <h2 className="hero-title">
-                        Yaşam Alanlarınız İçin Modern ve Güvenilir Çözümler
-                    </h2>
-                    <p className="hero-subtitle">
-                        Cam balkon, PVC doğrama, sineklik ve daha fazlası...
-                    </p>
-                </div>
+
             </div>
-        </section>
+
+        </section >
     );
 };
 

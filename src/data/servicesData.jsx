@@ -1,8 +1,4 @@
 
-
-
-
-
 export const servicesData = {
     5: {
         title: "Cam Balkon Sistemleri",
@@ -20,11 +16,11 @@ export const servicesData = {
             "Garanti Süresi": "5 yıl",
         },
         gallery: [
-            "/pictures/camb1.webp",
-            "/pictures/camb2.jpg",
-            "/pictures/camb3.jpeg",
-            "/pictures/camb4.webp",
-            "/pictures/camb5.jpeg",
+            "/picture/camb1.webp",
+            "/picture/camb2.jpg",
+            "/picture/camb3.jpeg",
+            "/picture/camb4.webp",
+            "/picture/camb5.jpeg",
         ],
     },
 
@@ -43,13 +39,7 @@ export const servicesData = {
             "Yüzey": "Nano cam kaplama",
             "Yükseklik": "185 cm",
         },
-        gallery: [
-            "/pictures/dusakabin1.jpg",
-            "/pictures/dusakabin2.jpg",
-            "/pictures/dusakabin3.jpg",
-            "/pictures/dusakabin4.jpg",
-            "/pictures/dusakabin5.jpg",
-        ],
+
     },
     0: {
         title: "PVC Pencere ve Kapı Sistemleri",
@@ -68,13 +58,7 @@ export const servicesData = {
             "Sınıf": "TS EN 12608-1 B Sınıfı",
             "Isı İletkenlik Kat Sayısı": "Uf: 1.4 W / m².K"
         },
-        gallery: [
-            "/pictures/pvc.jpg",
-            "/pictures/pvc2.jpg",
-            "/pictures/pvc3.jpg",
-            "/pictures/pvc4.webp",
-            "/pictures/pvc5.jpg",
-        ],
+
     },
     1: {
         title: "PVC Sürme Sistemleri",
@@ -94,13 +78,7 @@ export const servicesData = {
             "Isı İletkenlik Kat Sayısı": "Uf: 1.3 W / m².K"
 
         },
-        gallery: [
-            "/pictures/surme1.jpg",
-            "/pictures/surme2.jpg",
-            "/pictures/surme3.webp",
-            "/pictures/surme4.jpg",
-            "/pictures/surme5.jpg",
-        ],
+
     },
     2: {
         title: " Kepenk ve Panjur Sistemleri",
@@ -120,13 +98,7 @@ export const servicesData = {
 
 
         },
-        gallery: [
-            "/pictures/panjur.jpg",
-            "/pictures/panjur2.jpg",
-            "/pictures/panjur3.jpg",
-            "/pictures/panjur4.jpg",
-            "/pictures/panjur5.webp",
-        ],
+
     },
     3: {
         title: " Sineklik Sistemleri",
@@ -146,13 +118,7 @@ export const servicesData = {
             "Dayanıklılık": "UV ve pas direnci"
 
         },
-        gallery: [
-            "/pictures/sinek1.jpg",
-            "/pictures/sinek2.jpg",
-            "/pictures/sinek3.jpg",
-            "/pictures/sinek4.jpeg",
-            "/pictures/sinek5.jpg",
-        ],
+
     },
     6: {
         title: " Alüminyum Doğrama",
@@ -173,13 +139,7 @@ export const servicesData = {
 
 
         },
-        gallery: [
-            "/pictures/al1.jpg",
-            "/pictures/al2.jpg",
-            "/pictures/al3.jpg",
-            "/pictures/al4.jpeg",
-            "/pictures/al5.jpg",
-        ],
+
     },
     7: {
         title: " Küpeşte Sistemleri",
@@ -200,13 +160,7 @@ export const servicesData = {
 
 
         },
-        gallery: [
-            "/pictures/kupeste1.jpg",
-            "/pictures/kupeste2.webp",
-            "/pictures/kupeste3.jpg",
-            "/pictures/kupeste4.jpeg",
-            "/pictures/kupeste5.jpg",
-        ],
+
     },
     8: {
         title: " Fotoselli Kapı Sistemleri",
@@ -228,13 +182,7 @@ export const servicesData = {
 
 
         },
-        gallery: [
-            "/pictures/foto1.webp",
-            "/pictures/foto2.jpg",
-            "/pictures/foto3.jpg",
-            "/pictures/foto4.jpeg",
-            "/pictures/foto5.jpg",
-        ],
+
     },
     9: {
         title: " Otomatik Kepenk Sistemleri",
@@ -257,12 +205,6 @@ export const servicesData = {
             "Standartlar": "TS EN 13241"
 
         },
-        gallery: [
-            "/pictures/kepenk1.jpg",
-            "/pictures/kepenk2.webp",
-            "/pictures/kepenk3.jpg",
-            "/pictures/kepenk4.jpeg",
-            "/pictures/kepenk5.jpg",
-        ],
+
     },
 };
