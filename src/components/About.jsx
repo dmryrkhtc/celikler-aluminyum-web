@@ -1,23 +1,22 @@
 import React from "react";
-import pexelImage from "../pictures/pexel.jpg";
+
 import pexel2Image from "../pictures/dukkan.jpg";
 import pexel3Image from "../pictures/araba.jpg";
+import pexel4Image from "../pictures/pexel.jpg";
 import "./About.css";
 
 const About = () => {
     return (
         <section className="about">
             {/* Arka plan görseli */}
-            <div
-                className="about-bg"
-                style={{ backgroundImage: `url(${pexelImage})` }}
-            ></div>
+
 
             <div className="container">
                 <div className="image-container">
 
                     <img src={pexel2Image} alt="Çelikler Alüminyum Hakkımızda" />
                     <img src={pexel3Image} alt="Çelikler Alüminyum Hakkımızda" />
+                    <img src={pexel4Image} alt="Çelikler Alüminyum Hakkımızda" />
                 </div>
 
                 <div className="text-container">

@@ -7,9 +7,18 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-section">
                     <h4>İletişim</h4>
-                    <p>4. Cd. 4 EYLÜL SANAYİİ SİTESİ NO:18 Gültepe 58020 Sivas Merkez/Sivas</p>
-                    <p>Nuri ÇELİK Tel: <a href="tel:05364505458">536 450 54 58</a></p>
-                    <p>Nuri ÇELİK Tel2: 552 238 31 93</p>
+                    <p>
+                        <br />
+                        <a
+                            href="https://www.google.com/maps?ll=39.725886,37.009512&z=16&t=m&hl=tr&gl=TR&mapclient=embed&q=4.+Cd.+4+EYL%C3%9CL+SANAY%C4%B0%C4%B0+S%C4%B0TES%C4%B0+NO:18+G%C3%BCltepe+58020+Sivas+Merkez/Sivas"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        > 4. Cd. 4 EYLÜL SANAYİİ SİTESİ NO:18 Gültepe 58020 Sivas Merkez/Sivas
+
+                        </a>
+                    </p>
+                    <p>Nuri ÇELİK Tel: <a href="tel:05364505458">0536 450 54 58</a></p>
+                    <p>Tel2: <a href="tel:05522383193">0552 238 31 93</a></p>
                     <p>Email: <a href="mailto:nuricelik@hotmail.com">nuricelik@hotmail.com</a></p>
                 </div>
 
