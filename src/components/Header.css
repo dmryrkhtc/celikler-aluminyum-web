@@ -1,6 +1,6 @@
 /* Genel Header Stili */
 header {
-  background-color: #2c50a4;
+  background-color: #5e88ea;
   color: #fff;
   padding: 20px 40px;
   display: flex;
@@ -46,12 +46,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #77b3e8f1;
+  color: #0065bdf1;
   background-color: transparent;}
 
 
 nav ul li a.active {
-  color: #77b3e8f1;
+  color: #0057a3f1;
   background-color: transparent;
 }
 

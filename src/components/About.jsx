@@ -1,6 +1,7 @@
 import React from "react";
 import pexelImage from "../pictures/pexel.jpg";
-import pexel2Image from "../pictures/pexel2.webp";
+import pexel2Image from "../pictures/dukkan.jpg";
+import pexel3Image from "../pictures/araba.jpg";
 import "./About.css";
 
 const About = () => {
@@ -14,8 +15,9 @@ const About = () => {
 
             <div className="container">
                 <div className="image-container">
-                    {/* Burada import edilen değişkeni kullandık */}
+
                     <img src={pexel2Image} alt="Çelikler Alüminyum Hakkımızda" />
+                    <img src={pexel3Image} alt="Çelikler Alüminyum Hakkımızda" />
                 </div>
 
                 <div className="text-container">

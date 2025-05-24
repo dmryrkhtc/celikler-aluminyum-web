@@ -7,10 +7,10 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-section">
                     <h4>İletişim</h4>
-                    <p>Menemen Plastik OSB, 5. Cadde No:4 Menemen, İzmir</p>
-                    <p>Tel: <a href="tel:02323989898">0232 398 9898</a></p>
-                    <p>Fax: 0232 328 1846</p>
-                    <p>Email: <a href="mailto:info@celikleraluminyum.com">info@celikleraluminyum.com</a></p>
+                    <p>4. Cd. 4 EYLÜL SANAYİİ SİTESİ NO:18 Gültepe 58020 Sivas Merkez/Sivas</p>
+                    <p>Nuri ÇELİK Tel: <a href="tel:05364505458">536 450 54 58</a></p>
+                    <p>Nuri ÇELİK Tel2: 552 238 31 93</p>
+                    <p>Email: <a href="mailto:nuricelik@hotmail.com">nuricelik@hotmail.com</a></p>
                 </div>
 
                 <div className="footer-section">
@@ -18,7 +18,6 @@ const Footer = () => {
                     <ul>
                         <li><a href="/about">Hakkımızda</a></li>
                         <li><a href="/services">Hizmetler</a></li>
-
                         <li><a href="/contact">İletişim</a></li>
                     </ul>
                 </div>
@@ -26,10 +25,18 @@ const Footer = () => {
                 <div className="footer-section">
                     <h4>Sosyal Medya</h4>
                     <div className="social-icons">
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a
+                            href="https://www.facebook.com/people/%C3%A7elikler-cam-pvc-al%C3%BCminyum/100067905754992/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <img src="/images/face.png" alt="Facebook" />
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a
+                            href="https://www.instagram.com/celikleraluminyum"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <img src="/images/insta.png" alt="Instagram" />
                         </a>
                     </div>

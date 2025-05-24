@@ -78,3 +78,23 @@
 .slick-dots li.slick-active button:before {
   color: #003366;
 }
+.service-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.service-search-input {
+  margin-bottom: 40px;
+  padding: 12px 15px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.service-search-input:focus {
+  border-color: #0055a5;
+  box-shadow: 0 0 8px rgba(0, 51, 102, 0.3);
+}

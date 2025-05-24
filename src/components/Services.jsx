@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Services.css";
-import img1 from "../pictures/service1.jpg";
-import img2 from "../pictures/service2.jpg";
-import img3 from "../pictures/service3.jpg";
-import img4 from "../pictures/sineklik1.jpg";
-import img5 from "../pictures/dusakabin2.jpg";
-import img6 from "../pictures/cambalkon1.jpg";
-import img7 from "../pictures/dograma1.jpg";
-import img8 from "../pictures/küpeste1.jpg";
-import img9 from "../pictures/fotosel1.jpg";
-import img10 from "../pictures/kepenk1.jpg";
+import img1 from "../pictures/pvc1.jpg";
+import img2 from "../pictures/surme2.jpg";
+import img3 from "../pictures/panjur2.jpg";
+import img4 from "../pictures/sinek2.jpg";
+import img5 from "../pictures/dusakabin4.jpg";
+import img6 from "../pictures/camb5.jpeg";
+import img7 from "../pictures/al1.jpg";
+import img8 from "../pictures/kupeste1.jpg";
+import img9 from "../pictures/foto3.jpg";
+import img10 from "../pictures/kepenk4.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -93,23 +93,49 @@ const settings = {
 };
 
 const Services = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    // Arama terimine göre filtrelenmiş hizmetler
+    const filteredServices = servicesData.filter(service =>
+        service.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
         <section className="services">
             <h2>Hizmetlerimiz</h2>
-            <Slider {...settings}>
-                {servicesData.map((service, index) => (
-                    <div className="service-card" key={index}>
-                        <Link to={`/services/${index}`}>
-                            <img src={service.image} alt={service.title} />
-                            <div className="service-title-bar">{service.title}</div>
-                            <p>{service.description}</p>
-                        </Link>
-                    </div>
-                ))}
-            </Slider>
-        </section >
+            {/* Arama kutusu */}
+            <input
+                type="text"
+                placeholder="Hizmet ara..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                style={{
+                    marginBottom: "20px",
+                    padding: "10px",
+                    width: "100%",
+                    maxWidth: "400px",
+                    fontSize: "16px",
+                }}
+            />
+
+            {/* Filtrelenmiş hizmetleri slider ile göster */}
+            {filteredServices.length > 0 ? (
+                <Slider {...settings}>
+                    {filteredServices.map((service, index) => (
+                        <div className="service-card" key={index}>
+                            <Link to={`/services/${servicesData.indexOf(service)}`}>
+                                <img src={service.image} alt={service.title} />
+                                <div className="service-title-bar">{service.title}</div>
+                                <p>{service.description}</p>
+                            </Link>
+                        </div>
+                    ))}
+                </Slider>
+            ) : (
+                <p>Aramanıza uygun hizmet bulunamadı.</p>
+            )}
+        </section>
     );
 };
-
 
 export default Services;

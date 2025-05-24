@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
+import dukkanImage from "../pictures/dukkan.jpg";
 
 const AboutSummary = () => {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ const AboutSummary = () => {
         <section className="about summary">
             <div className="container">
                 <div className="image-container">
-                    <img src="/images/ornek.jpeg" alt="Çelikler Alüminyum Hakkımızda" />
+                    <img src={dukkanImage} alt="Çelikler Alüminyum Hakkımızda" />
                 </div>
 
                 <div className="text-container">

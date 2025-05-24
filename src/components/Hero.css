@@ -67,13 +67,14 @@
   border: none;
   border-radius: 8px;
   font-weight: bold;
-  background-color: #007bff;
+  background-color: #0e88f4f1;
   color: white;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   transition: all 0.3s ease;
+  text-decoration: none; 
 }
 
 .btn::after {
@@ -86,17 +87,18 @@
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #0769d2;
 }
 
 .btn.outline {
   background-color: transparent;
-  border: 2px solid #007bff;
-  color: #007bff;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .btn.outline:hover {
-  background-color: #007bff;
+  background-color: #0e88f4f1;
+  border: 2px solid #0e88f4f1;
   color: white;
 }
 

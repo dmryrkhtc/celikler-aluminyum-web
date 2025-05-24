@@ -34,8 +34,8 @@
 .service-video,
 .slider-image {
   width: 100%;
-  max-width: 320px; /* Daha küçük genişlik */
-  height: 180px; /* Daha küçük yükseklik */
+  max-width: 420px; /* Daha küçük genişlik */
+  height: 280px; /* Daha küçük yükseklik */
   object-fit: cover;
   border-radius: 10px;
   display: block;

@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
-import heroImage from "../pictures/b.webp";
+import heroImage from "../pictures/b.jpg";
 
 const Hero = () => {
     return (
@@ -19,19 +20,16 @@ const Hero = () => {
                             Modern çözümlerimizle sektörde fark yaratıyoruz.
                         </p>
                         <div className="hero-buttons">
-                            <button className="btn">Ücretsiz Keşif</button>
-                            <button className="btn outline">Projeni Başlat</button>
+                            <Link to="/services" className="btn">Ücretsiz Keşif</Link>
+                            <Link to="/contact" className="btn outline">Projeni Başlat</Link>
                         </div>
                     </div>
-                    <div className="hero-image">
-                        <img src="/images/ornek.jpeg" alt="Çelikler Alüminyum" />
-                    </div>
+
                 </div>
-
             </div>
-
-        </section >
+        </section>
     );
 };
 
 export default Hero;
+
